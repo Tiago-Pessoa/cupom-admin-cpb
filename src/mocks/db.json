@@ -302,7 +302,8 @@
       "valor": "25",
       "dataI": "08/07/1987",
       "dataF": "31/12/2000",
-      "id": 20
+      "id": 20,
+      "ativo": false
     },
     {
       "cupom": "Teste 5",

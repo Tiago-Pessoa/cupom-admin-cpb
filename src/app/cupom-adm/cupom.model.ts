@@ -1,3 +1,5 @@
+import { Produto } from "../cupom-edicao/produto.model";
+
 export interface Cupom {
   id: number;
   cupom: string;
@@ -6,8 +8,8 @@ export interface Cupom {
   tipo: string;
   valor: number;
   ativo: boolean;
-  produtos: any; 
+  produtos: any;
 }
 
- 
+
 

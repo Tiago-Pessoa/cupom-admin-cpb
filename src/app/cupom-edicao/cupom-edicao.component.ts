@@ -31,18 +31,6 @@ export class CupomEdicaoComponent implements OnInit {
     'Porcentagem','Valor Fixo','Brinde'
   ];
 
-
-  // tipoValor:Tipo[] = [
-  //   {value: 'porcentagem', viewValue: 'Porcentagem'},
-  //   {value: 'valorFixo', viewValue: 'Valor Fixo'},
-  //   {value: 'brinde', viewValue: 'Brinde'},
-  // ];
- 
-   
-  
-
-
-
   tipoCupom: string[] = ['Grupo', 'Único'];
   selecionadoC: string = '';
 
@@ -60,10 +48,7 @@ export class CupomEdicaoComponent implements OnInit {
   }
 
   getCupom(): void {
-
-
     const paramId = this.route.snapshot.paramMap.get('id');
-
     if (paramId === 'new') {
       this.isEditing = false;
       this.cupom = {cupom: '' } as Cupom
@@ -75,7 +60,7 @@ export class CupomEdicaoComponent implements OnInit {
         .getCupom(id)
         .subscribe((cupom) => {(this.cupom = cupom);
         });
-    }
+    };
   }
 
   getFloatLabelValue(): FloatLabelType {
@@ -85,10 +70,6 @@ export class CupomEdicaoComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
-  // isFormValid(): boolean {
-  //   return !!this.cupom.cupom.trim();
-  // }
 
   create(): void {
     this.cupomAdmService.create(this.cupom).subscribe((cupom) => this.goBack());
@@ -107,18 +88,13 @@ export class CupomEdicaoComponent implements OnInit {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
      data: dialogData,
       width:'15rem',
-      
     })
-
     dialogRef.afterClosed().subscribe((result) => {
       if (result){
         this.cupomAdmService.delete(cupom).subscribe(() => {
         this.goBack();
         });
-
-      }
-    })
-
-  }
-  
+      };
+    });
+  };
 }

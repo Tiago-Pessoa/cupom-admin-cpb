@@ -30,7 +30,6 @@ registerLocaleData(ptBr);
     ToolbarComponent,
     CupomAdmComponent,
     CupomEdicaoComponent,
-    // CupomCriacaoComponent,
     LoadingComponent,
     ConfirmationDialogComponent,
   ],

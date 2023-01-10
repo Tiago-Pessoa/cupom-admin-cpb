@@ -39,7 +39,7 @@ export class CupomAdmComponent implements OnInit {
   onSelected(cupom: Cupom): void {
     this.router.navigate(['/cuponsAdm', cupom.id]);
   }
-  
+
   confirma(cupom: Cupom): void {
     const dialogData: DialogData = {
     cancelText: 'Cancelar',
@@ -48,7 +48,7 @@ export class CupomAdmComponent implements OnInit {
     }
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
      data: dialogData,
-      width:'15rem',
+      width:'20rem',
     })
     dialogRef.afterClosed().subscribe((result) => {
       if (result){

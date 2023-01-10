@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Cupom } from './cupom-adm/cupom.model';
-import { CUPONS } from './cupom-adm/mock-cupons';
 
 @Injectable({
   providedIn: 'root',
@@ -25,7 +24,7 @@ private cuponsUrl = `${environment.baseUrl}/cupons`;
       return of([]);
      }
      return this.http.get<Cupom[]>(`${this.cuponsUrl}?cupom=${term}`).pipe(
-      tap((cupons)=> cupons.length ? console.log('found coupons') : 
+      tap((cupons)=> cupons.length ? console.log('found coupons') :
       alert("Nenhum Cupom Encontrado com esses termos, tente outro nome para encontrar um Cupom existente!")
       )
      )
@@ -47,5 +46,4 @@ private cuponsUrl = `${environment.baseUrl}/cupons`;
     return `${this.cuponsUrl}/${id}`;
   }
   constructor(private http: HttpClient) {}
-
 }
