@@ -1,0 +1,37 @@
+<mat-card class="campo-busca">
+  <mat-card-title class="campo-titulo"> Cupons </mat-card-title>
+  
+  <mat-card-content class="campo-input"   fxLayout="row">
+    <mat-icon matTooltip="Buscar Cupom">search</mat-icon>
+    <input
+    id="limpar"
+    [matAutocomplete]="auto"
+    matInput
+    placeholder="Digite aqui o nome do cupom que deseja encontrar..."
+    #boxBusca
+    type="text"
+    (input)="search(boxBusca.value)"
+    />
+    <button
+    mat-flat-button
+    matSuffix
+    *ngIf="boxBusca.value"
+    (click)= "boxBusca.value = ''"
+    (click)="limpar()"
+    class="btn-resetar"
+    color="warn"
+  >
+  Limpar
+  </button>
+
+  <mat-autocomplete
+    #auto="matAutocomplete"
+    (optionSelected)="onSelected($event); boxBusca.value= ''"
+  >
+    <mat-option *ngFor="let cupom of cupons$ | async" [value]="cupom">
+      {{ cupom.cupom  | uppercase }}
+    </mat-option>
+  </mat-autocomplete>
+
+  </mat-card-content>
+</mat-card>

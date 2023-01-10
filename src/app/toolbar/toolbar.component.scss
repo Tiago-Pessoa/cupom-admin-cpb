@@ -1,0 +1,71 @@
+.mat-sidenav-content {
+  background: #eeeeee;
+}
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-radio-group {
+  display: block;
+  border: 1px solid #555;
+  margin: 20px;
+  padding: 10px;
+}
+.mat-toolbar {
+  font-weight: 400;
+  background: #5481e7;
+}
+
+// .mat-focus-indicator:hover {
+//   background: #eeeeee;
+// }
+.mat-menu-item:hover {
+  background: #eeeeee;
+}
+
+.label {
+  font-size: 12px;
+  margin: 1px;
+  margin-right: 0.5em;
+}
+.select {
+  background: #466bc2;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 2em;
+  color: white;
+  border: none;
+  font-size: 13px;
+}
+
+.nome {
+  margin-right: 1em;
+}
+.cpb-adm {
+  background-image: url("../../logo-cpb-admin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cpb-voucher {
+  margin-left: 1em;
+  background-image: url("../../logo-voucher.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.criacao-cupom {
+  margin-right: 4em;
+}
+
+.logo-cpb {
+  padding: 0.1em 0.8em;
+}
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+

@@ -1,0 +1,24 @@
+table {
+  width: 90%;
+  margin: 0 auto 2em auto;
+}
+
+.mat-row {
+  height: 6em;
+  cursor: pointer;
+}
+.mat-row:hover {
+  background: #eeeeee;
+}
+
+
+.mat-fab {
+  position: fixed;
+  top: 87%;
+  left: 90%;
+  background: #5481e7;
+}
+
+@media only screen and (max-width: 518px) {
+   
+}

@@ -1,0 +1,203 @@
+<div class="container  mat-elevation-z8">
+  <div><h2 class="title">{{ isEditing ? "Edição de" : "Novo"}} Cupom</h2></div>
+  <div><p class="sub-title">Informações do Cupom</p></div>
+
+  <form class="cupom-form" fxLayoutGap="12px" fxLayout="column">
+    <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Identificador</mat-label>
+      <input
+        matInput
+        name="identificador"
+        placeholder="Nome Cupom"
+        [(ngModel)]="cupom.cupom"
+      />
+    </mat-form-field>
+    <div><p class="text">Configurações do Cupom</p></div>
+
+
+    <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Tipo Valor</mat-label>
+      <mat-select name="tipoValor" [(ngModel)]="cupom.tipo">
+        <mat-option  [value]="valor" *ngFor="let valor of tipoValor">
+          {{ valor }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Tipo Valor</mat-label>
+      <input
+        matInput
+        name="tipo"
+        placeholder="Porcentagem, Valor Fixo ou Brinde"
+        [(ngModel)]="cupom.tipo"
+      />
+    </mat-form-field> -->
+
+    <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Valor</mat-label>
+      <input
+        matInput
+        name="valor"
+        placeholder="Valor"
+        [(ngModel)]="cupom.valor"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Tipo Cupom</mat-label>
+      <mat-select name="tipoCupom">
+        <mat-option [value]="tipo" *ngFor="let tipo of tipoCupom">
+          {{ tipo }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Valor Mínimo</mat-label>
+      <input matInput name="valMin" placeholder="Ex. 0,00" />
+    </mat-form-field>
+    <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Valor Máximo</mat-label>
+      <input matInput name="valMax" placeholder="Ex. 99,99" />
+    </mat-form-field>
+    <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Benefício</mat-label>
+      <input matInput name="beneficio" placeholder="Descrição do Benefício" />
+    </mat-form-field>
+    <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Data Inicial</mat-label>
+      <input
+        matInput
+        name="dataI"
+        placeholder="Data Inicial"
+        [(ngModel)]="cupom.dataI"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="input-form" appearance="outline">
+      <mat-label>Data Final</mat-label>
+      <input
+        matInput
+        name="dataF"
+        placeholder="Data Final"
+        [(ngModel)]="cupom.dataF"
+      />
+    </mat-form-field>
+    <div
+      class="ativo"
+      fxLayoutAlign="align-items: space-between"
+      fxLayout="column-reverse"
+      fxLayoutGap="12px"
+    >
+      <mat-label>Ativo</mat-label>
+      <mat-slide-toggle
+        name="ativo"
+        [(ngModel)]="cupom.ativo"
+        color="primary"
+        (click)="$event.stopPropagation()"
+      ></mat-slide-toggle>
+    </div>
+  </form>
+  <hr />
+
+<div class="boxProdutos" *ngIf="isEditing">
+  <div><h2 class="cadastro-title">Cadastro de Produtos no Cupom</h2></div>
+  <form class="cupom-form" fxLayout="row" fxLayoutAlign="start center">
+    <mat-form-field class="boxCadastro" appearance="outline">
+      <mat-label>Adicione um produto por vez</mat-label>
+      <input
+        class="cadastroProduto"
+        matInput
+        name="cadastroProduto"
+        placeholder="Ex. 12345"
+         
+      />
+    </mat-form-field>
+    <button 
+    class="inserir" 
+    color="primary" 
+    mat-raised-button
+    
+    >
+    INSERIR
+  </button>
+  </form>
+
+  <h5 class="sub-title">Listagem de Produtos no Cupom</h5>
+
+  <div
+  
+    class="produtos"
+    *ngFor="let prod of cupom.produtos"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+  >
+    <p class="cod">{{ prod.cod }}</p>
+    <p class="produto">{{ prod.produto }}</p>
+
+    <button
+      class="btnProd"
+      mat-icon-button
+      aria-label="Example icon button with a vertical three dot icon"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
+</div>
+  <div class="buttom-bar">
+    <div class="box-btn" fxLayout="row" fxLayoutAlign="end center">
+      <button
+        class="btn-cadastro"
+        mat-raised-button
+        color="accent"
+        (click)="goBack()"
+      >
+        VOLTAR
+      </button>
+  
+      <button 
+        class="btn-cadastro" 
+        mat-raised-button 
+        color="warn"
+        (click)="delete(cupom)"
+        >
+        DELETAR
+      </button>
+  
+      <button 
+        class="btn-cadastro salvar" 
+        mat-raised-button 
+        color="primary"
+        (click)="update()"
+        >
+        SALVAR
+      </button>
+    </div>
+  </div>
+
+
+
+<div class="buttom-bar" *ngIf="!isEditing">
+  <div class="box-btn" fxLayout="row" fxLayoutAlign="end center">
+    <button
+      class="btn-cadastro"
+      mat-raised-button
+      color="accent"
+      (click)="goBack()"
+    >
+      VOLTAR
+    </button>
+
+    <button 
+      class="btn-cadastro salvar" 
+      mat-raised-button 
+      (click)="create()"
+      color="primary"
+      >
+      CADASTRAR
+    </button>
+  </div>
+</div>
+

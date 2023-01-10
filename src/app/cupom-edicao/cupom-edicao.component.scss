@@ -1,0 +1,108 @@
+.container {
+  width: 90%;
+  margin: 2em auto 5.5em auto;
+  background: #fff;
+  padding: 0.5em 0;
+}
+
+.title {
+  margin-left: 1em;
+}
+.cadastro-title {
+  margin-left: 1em;
+  color: rgba($color: #000000, $alpha: 0.6);
+}
+.sub-title {
+  margin-left: 1.5em;
+  color: rgba($color: #000000, $alpha: 0.5);
+  font-size: 0.8em;
+}
+h5.sub-title {
+  margin-left: 1.5em;
+  color: rgba($color: #000000, $alpha: 0.6);
+  font-size: 0.9em;
+  font-weight: 900;
+  padding-bottom: 0.5em;
+}
+.text {
+  margin-left: 0.5em;
+  color: rgba($color: #000000, $alpha: 0.5);
+  font-size: 0.8em;
+}
+.cupom-form {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.ativo {
+  margin-left: 1em;
+}
+hr {
+  margin: 2em;
+}
+
+.inserir {
+  margin-left: 0.5em;
+  background: #5481e7;
+  margin-bottom: 1.5em;
+  font-weight: 300;
+}
+.boxCadastro {
+  width: 70%;
+  padding: 0;
+}
+table {
+  width: 90%;
+  margin: 0 auto 2em auto;
+}
+
+.mat-row {
+  height: 6em;
+  cursor: pointer;
+}
+.mat-row:hover {
+  background: #eeeeee;
+}
+
+.mat-column-position {
+  width: 10%;
+}
+.mat-column-action {
+  width: 10%;
+}
+
+.btn-cadastro {
+  margin: 1em 1em;
+  font-weight: 300;
+}
+.salvar {
+  margin-right: 3em;
+}
+.box-btn {
+  background: #5481e7;
+}
+.buttom-bar {
+  position: fixed;
+  height: 64px;
+  width: 100%;
+  bottom: 0;
+  background-color: #5481e7;
+  box-sizing: border-box;
+}
+.produtos {
+  margin-left: 1em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.6);
+}
+.cod {
+  width: 5em;
+  margin-right: 1em;
+}
+.btnProd {
+  width: 2em;
+  margin-right: 4em;
+}
+
+.produto {
+  width: 100%;
+}

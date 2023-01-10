@@ -1,0 +1,317 @@
+{
+  "cupons": [
+    {
+      "id": 1,
+      "cupom": "CPBDIGITAL",
+      "dataI": "20/08/2000",
+      "dataF": "23/08/2023",
+      "tipo": "Valor Fixo",
+      "valor": "2",
+      "ativo": true,
+      "produtos": [
+        {
+          "cod": 4565,
+          "produto": "Livro 1"
+        },
+        {
+          "cod": 13202,
+          "produto": "Livro 2"
+        },
+        {
+          "cod": 7895,
+          "produto": "Livro 3"
+        },
+        {
+          "cod": 16541,
+          "produto": "Livro 4"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "cupom": "SIMPOSIO",
+      "dataI": "12/01/2019",
+      "dataF": "31/08/2000",
+      "tipo": "Porcentagem",
+      "valor": 70,
+      "ativo": false,
+      "produtos": [
+        {
+          "cod": 4565,
+          "produto": "Livro 5"
+        },
+        {
+          "cod": 13202,
+          "produto": "Livro 6"
+        },
+        {
+          "cod": 7895,
+          "produto": "Livro 7"
+        },
+        {
+          "cod": 16541,
+          "produto": "Livro 8"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "cupom": "Som do Céu",
+      "dataI": "20/06/2000",
+      "dataF": "19/11/2021",
+      "tipo": "Brinde",
+      "valor": 10,
+      "ativo": true,
+      "produtos": [
+        {
+          "cod": 4565,
+          "produto": "Livro 1"
+        },
+        {
+          "cod": 13202,
+          "produto": "Livro 2"
+        },
+        {
+          "cod": 7895,
+          "produto": "Livro 3"
+        },
+        {
+          "cod": 156,
+          "produto": "Livro 4"
+        },
+        {
+          "cod": 12365,
+          "produto": "Livro 5"
+        },
+        {
+          "cod": 14587,
+          "produto": "Livro 6"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "cupom": "COLPORTOR",
+      "dataI": "20/08/2000",
+      "dataF": "20/08/2000",
+      "tipo": "Porcentagem",
+      "valor": 55,
+      "ativo": false,
+      "produtos": [
+        {
+          "cod": 4565,
+          "produto": "Livro 1"
+        },
+        {
+          "cod": 7895,
+          "produto": "Livro 3"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "cupom": "VALE2",
+      "dataI": "20/08/2000",
+      "dataF": "20/08/2000",
+      "tipo": "Porcentagem",
+      "valor": 20.4,
+      "ativo": true,
+      "produtos": [
+        {
+          "cod": 13202,
+          "produto": "Livro 2"
+        },
+        {
+          "cod": 16541,
+          "produto": "Livro 4"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "cupom": "PROFECIAS",
+      "dataI": "20/08/2000",
+      "dataF": "20/08/2000",
+      "tipo": "Valor Fixo",
+      "valor": 45.7,
+      "ativo": false,
+      "produtos": []
+    },
+    {
+      "id": 7,
+      "cupom": "LEITURA",
+      "dataI": "20/08/2000",
+      "dataF": "20/08/2000",
+      "tipo": "Porcentagem",
+      "valor": 80,
+      "ativo": true,
+      "produtos": [
+        {
+          "cod": 4565,
+          "produto": "Livro 1"
+        },
+        {
+          "cod": 13202,
+          "produto": "Livro 2"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "cupom": "SAUDE",
+      "dataI": "20/08/2000",
+      "dataF": "20/08/2000",
+      "tipo": "Porcentagem",
+      "valor": 30,
+      "ativo": false,
+      "produtos": [
+        {
+          "cod": 4565,
+          "produto": "Livro 1"
+        },
+        {
+          "cod": 13202,
+          "produto": "Livro 2"
+        },
+        {
+          "cod": 7895,
+          "produto": "Livro 3"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "cupom": "CIENCIAS ",
+      "dataI": "20/08/2000",
+      "dataF": "20/08/2000",
+      "tipo": "Porcentagem",
+      "valor": 62,
+      "ativo": true,
+      "produtos": [
+        {
+          "cod": 4565,
+          "produto": "Livro 1"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "cupom": "Vida e saúde",
+      "dataI": "20/08/2000",
+      "dataF": "20/08/2000",
+      "tipo": "Valor Fixo",
+      "valor": 51,
+      "ativo": false,
+      "produtos": [
+        {
+          "cod": 4565,
+          "produto": "Livro 1"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "cupom": "Deus é Bom",
+      "dataI": "20/08/2000",
+      "dataF": "20/08/2000",
+      "tipo": "Porcentagem",
+      "valor": 24.3,
+      "ativo": true,
+      "produtos": [
+        {
+          "cod": 4565,
+          "produto": "Familia Livro1"
+        }
+      ]
+    },
+    {
+      "cupom": "Deus Conosco",
+      "tipo": "Valor Fixo",
+      "valor": "20",
+      "dataI": "01/01/2000",
+      "dataF": "31/12/2154",
+      "ativo": false,
+      "id": 12
+    },
+    {
+      "cupom": "Apocalipse",
+      "tipo": "Porcentagem",
+      "valor": "20",
+      "dataI": "01/02/1999",
+      "dataF": "23/08/2023",
+      "ativo": true,
+      "id": 13
+    },
+    {
+      "cupom": "Mandamentos",
+      "tipo": "Brinde",
+      "valor": "30",
+      "dataI": "01/05/1988",
+      "dataF": "22/10/2015",
+      "id": 14,
+      "ativo": false
+    },
+    {
+      "cupom": "Fidelidade",
+      "tipo": "Valor Fixo",
+      "valor": "45.20",
+      "dataI": "20/01/2023",
+      "dataF": "23/02/2032",
+      "id": 15,
+      "ativo": true
+    },
+    {
+      "cupom": "Teologia",
+      "tipo": "Brinde",
+      "valor": "25",
+      "dataI": "01/01/2000",
+      "dataF": "20/08/2023",
+      "ativo": false,
+      "id": 16
+    },
+    {
+      "cupom": "Teste 1",
+      "tipo": "Brinde",
+      "valor": "25",
+      "dataI": "20/01/2023",
+      "dataF": "23/02/2032",
+      "ativo": true,
+      "id": 17
+    },
+    {
+      "cupom": "Teste 2",
+      "tipo": "Brinde",
+      "valor": "70",
+      "dataI": "12/01/2019",
+      "dataF": "31/12/2000",
+      "ativo": false,
+      "id": 18
+    },
+    {
+      "cupom": "Teste 3",
+      "tipo": "Valor Fixo",
+      "valor": "30",
+      "dataI": "01/02/1999",
+      "dataF": "23/02/2032",
+      "id": 19,
+      "ativo": true
+    },
+    {
+      "cupom": "Teste 4",
+      "tipo": "Porcentagem",
+      "valor": "25",
+      "dataI": "08/07/1987",
+      "dataF": "31/12/2000",
+      "id": 20
+    },
+    {
+      "cupom": "Teste 5",
+      "tipo": "Porcentagem",
+      "valor": "25",
+      "dataI": "01/01/2000",
+      "dataF": "23/08/2023",
+      "ativo": true,
+      "id": 21
+    }
+  ]
+}

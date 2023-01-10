@@ -1,0 +1,62 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [mode]="mode.value || 'over'">
+    <p class="logo-cpb">
+      <img
+        class="cpb-adm"
+        src="../../logo-cpb-admin.png"
+        alt="Logo CPB Admin"
+      />
+    </p>
+    <a class="link" href="#">
+      <p fxLayoutAlign="space-between center" fxLayoutGap="12px" fxLayout="row">
+        <img
+          class="cpb-voucher"
+          src="../../logo-voucher.png"
+          alt="Logo CPB Voucher"
+        />
+        <span class="criacao-cupom">Criação de Cupom</span>
+      </p>
+    </a>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        mat-icon-button
+        aria-label="Menu Lateral"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>CPB Cupons</span>
+      <span fxFlex></span>
+      <mat-label class="label">Servidor:</mat-label>
+      <select class="select" disabled name="status">
+        <option value="beta">Produção</option>
+        <option value="alpha">Homologação</option>
+      </select>
+      <span id="usuario" class="nome">Tiago Pessoa</span>
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Menu Auxiliar"
+        matTooltip="Menu"
+      >
+        <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>close</mat-icon>
+          <span>Sair</span>
+        </button>
+        <button mat-menu-item routerLink="/cuponsAdm">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar>
+    <app-loading></app-loading>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
