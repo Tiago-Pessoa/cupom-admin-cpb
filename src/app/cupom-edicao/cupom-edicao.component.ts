@@ -1,3 +1,4 @@
+import { PRODUTOS } from './mock-produtos';
 import { ConfirmationDialogComponent } from './../confirmation-dialog/confirmation-dialog.component';
 import { DialogData } from './../dialog-data.model';
 import { Location } from '@angular/common';
@@ -22,6 +23,8 @@ export class CupomEdicaoComponent implements OnInit {
     hideRequired: this.hideRequiredControl,
     floatLabel: this.floatLabelControl,
   });
+
+  produtos = PRODUTOS;
 
   cupom!: Cupom;
   isEditing!: boolean;
@@ -71,12 +74,65 @@ export class CupomEdicaoComponent implements OnInit {
     this.location.back();
   }
 
+
+
   create(): void {
+
     this.cupomAdmService.create(this.cupom).subscribe((cupom) => this.goBack());
   }
 
   update(): void {
     this.cupomAdmService.update(this.cupom).subscribe((cupom) => this.goBack());
+  }
+
+  cadastrar(): void {
+    let inputCodigo = (document.getElementById("cadastroProduto") as HTMLInputElement)
+    let codigo  = parseInt(inputCodigo?.value)
+    const produtos = PRODUTOS;
+    let status = false;
+    produtos.map((item) =>{
+      if (item.cod === codigo) {
+            if (this.cupom.produtos) {
+              inputCodigo.value = '';
+              status = true;
+            return this.cupom.produtos.push(item);
+            }else {
+               inputCodigo.value = '';
+               status = true;
+            return this.cupom.produtos = [item];
+            }
+          }
+        });
+        if (!status) {
+          inputCodigo.value = '';
+          alert(`Produto Não pertence ao cupom ${this.cupom.cupom}`)
+        }
+
+
+
+
+    // for (let i = 0; i < produtos.length; i++) {
+    //   const item = produtos[i];
+    //   if (item.cod ===  codigo) {
+    //     if (this.cupom.produtos) {
+    //     this.cupom.produtos.push(item);
+    //     }else {
+    //     this.cupom.produtos = [item];
+    //     }
+    //   }else{
+    //   console.log("item não encontrado");
+    //   }
+    // }
+
+
+
+
+  }
+
+  deletarProduto(): void {
+     
+    console.log('fui clicado')
+
   }
 
   delete(cupom: Cupom): void {

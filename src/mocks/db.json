@@ -6,7 +6,11 @@
       "dataI": "20/08/2000",
       "dataF": "23/08/2023",
       "tipo": "Valor Fixo",
-      "valor": "2",
+      "tipoCupom": "Único",
+      "valorMin": "1",
+      "valorMax": "99",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!",
+      "valor": "27.25",
       "ativo": true,
       "produtos": [
         {
@@ -52,7 +56,11 @@
           "cod": 16541,
           "produto": "Livro 8"
         }
-      ]
+      ],
+      "tipoCupom": "Grupo",
+      "valorMin": "10",
+      "valorMax": "99",
+      "beneficio": "Esse Cupom não dá desconto em nada."
     },
     {
       "id": 3,
@@ -86,6 +94,10 @@
         {
           "cod": 14587,
           "produto": "Livro 6"
+        },
+        {
+          "cod": 77777,
+          "produto": "Livro x"
         }
       ]
     },
@@ -105,6 +117,10 @@
         {
           "cod": 7895,
           "produto": "Livro 3"
+        },
+        {
+          "cod": 77777,
+          "produto": "Livro x"
         }
       ]
     },
@@ -159,8 +175,8 @@
     {
       "id": 8,
       "cupom": "SAUDE",
-      "dataI": "20/08/2000",
-      "dataF": "20/08/2000",
+      "dataI": "12/01/1995",
+      "dataF": "05/08/2010",
       "tipo": "Porcentagem",
       "valor": 30,
       "ativo": false,
@@ -177,7 +193,11 @@
           "cod": 7895,
           "produto": "Livro 3"
         }
-      ]
+      ],
+      "tipoCupom": "Grupo",
+      "valorMin": "10",
+      "valorMax": "99",
+      "beneficio": "Esse Cupom não dá desconto em nada."
     },
     {
       "id": 9,
@@ -219,8 +239,8 @@
       "ativo": true,
       "produtos": [
         {
-          "cod": 4565,
-          "produto": "Familia Livro1"
+          "cod": "",
+          "produto": ""
         }
       ]
     },
@@ -258,7 +278,13 @@
       "dataI": "20/01/2023",
       "dataF": "23/02/2032",
       "id": 15,
-      "ativo": true
+      "ativo": true,
+      "produtos": [
+        {
+          "cod": 77777,
+          "produto": "Livro y"
+        }
+      ]
     },
     {
       "cupom": "Teologia",
@@ -285,7 +311,13 @@
       "dataI": "12/01/2019",
       "dataF": "31/12/2000",
       "ativo": false,
-      "id": 18
+      "id": 18,
+      "produtos": [
+        {
+          "cod": 11111,
+          "produto": "Livro 5"
+        }
+      ]
     },
     {
       "cupom": "Teste 3",
@@ -303,7 +335,13 @@
       "dataI": "08/07/1987",
       "dataF": "31/12/2000",
       "id": 20,
-      "ativo": false
+      "ativo": false,
+      "produtos": [
+        {
+          "cod": 77777,
+          "produto": "Livro y"
+        }
+      ]
     },
     {
       "cupom": "Teste 5",
@@ -312,7 +350,72 @@
       "dataI": "01/01/2000",
       "dataF": "23/08/2023",
       "ativo": true,
-      "id": 21
+      "id": 21,
+      "tipoCupom": "Grupo",
+      "valorMin": "1",
+      "valorMax": "99",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!"
+    },
+    {
+      "cupom": "Teste 6",
+      "tipo": "Brinde",
+      "valor": "154",
+      "tipoCupom": "Único",
+      "valorMin": "1",
+      "valorMax": "99",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!",
+      "dataI": "01/01/2000",
+      "dataF": "23/02/2032",
+      "ativo": false,
+      "id": 22,
+      "produtos": [
+        {
+          "cod": 12345,
+          "produto": "Livro 1"
+        }
+      ]
+    }
+  ],
+  "produtos": [
+    {
+      "cod": 12345,
+      "produto": "Livro 1"
+    },
+    {
+      "cod": 54321,
+      "produto": "Livro 2"
+    },
+    {
+      "cod": 21314,
+      "produto": "Livro 3"
+    },
+    {
+      "cod": 41312,
+      "produto": "Livro 4"
+    },
+    {
+      "cod": 11111,
+      "produto": "Livro 5"
+    },
+    {
+      "cod": 22222,
+      "produto": "Livro 6"
+    },
+    {
+      "cod": 33333,
+      "produto": "Livro 7"
+    },
+    {
+      "cod": 44444,
+      "produto": "Livro 8"
+    },
+    {
+      "cod": 55555,
+      "produto": "Livro 9"
+    },
+    {
+      "cod": 66666,
+      "produto": "Livro 10"
     }
   ]
 }

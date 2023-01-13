@@ -1,15 +1,16 @@
-import { Produto } from "../cupom-edicao/produto.model";
-
 export interface Cupom {
   id: number;
   cupom: string;
   dataI: string;
   dataF: string;
   tipo: string;
-  valor: number;
+  tipoCupom: string;
+  valorMin: string;
+  valorMax: string;
+  beneficio: string;
+  valor:string;
   ativo: boolean;
   produtos: any;
 }
-
 
 

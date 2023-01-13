@@ -31,7 +31,7 @@
     </mat-form-field>
     <mat-form-field class="input-form" appearance="outline">
       <mat-label>Tipo Cupom</mat-label>
-      <mat-select name="tipoCupom">
+      <mat-select name="tipoCupom"  [(ngModel)]="cupom.tipoCupom">
         <mat-option [value]="tipo" *ngFor="let tipo of tipoCupom">
           {{ tipo }}
         </mat-option>
@@ -39,15 +39,30 @@
     </mat-form-field>
     <mat-form-field class="input-form" appearance="outline">
       <mat-label>Valor Mínimo</mat-label>
-      <input matInput name="valMin" placeholder="Ex. 0,00" />
+      <input
+       matInput
+       name="valMin"
+       placeholder="Ex. 0,00"
+       [(ngModel)]="cupom.valorMin"
+      />
     </mat-form-field>
     <mat-form-field class="input-form" appearance="outline">
       <mat-label>Valor Máximo</mat-label>
-      <input matInput name="valMax" placeholder="Ex. 99,99" />
+      <input
+       matInput
+       name="valMax"
+       placeholder="Ex. 99,99"
+       [(ngModel)]="cupom.valorMax"
+      />
     </mat-form-field>
     <mat-form-field class="input-form" appearance="outline">
       <mat-label>Benefício</mat-label>
-      <input matInput name="beneficio" placeholder="Descrição do Benefício" />
+      <input
+       matInput
+       name="beneficio"
+       placeholder="Descrição do Benefício"
+       [(ngModel)]="cupom.beneficio"
+      />
     </mat-form-field>
     <mat-form-field class="input-form" appearance="outline">
       <mat-label>Data Inicial</mat-label>
@@ -83,7 +98,7 @@
     </div>
   </form>
 
-  <hr />
+  <hr/>
 
   <div class="boxProdutos" *ngIf="isEditing">
     <div><h2 class="cadastro-title">Cadastro de Produtos no Cupom</h2></div>
@@ -91,6 +106,8 @@
       <mat-form-field class="boxCadastro" appearance="outline">
         <mat-label>Adicione um produto por vez</mat-label>
         <input
+          #boxCadastra
+          id="cadastroProduto"
           class="cadastroProduto"
           matInput
           name="cadastroProduto"
@@ -98,18 +115,18 @@
         />
       </mat-form-field>
       <button
+
       class="inserir"
       color="primary"
       mat-raised-button
+      (click)="cadastrar()"
       >
       INSERIR
       </button>
     </form>
 
     <h5 class="sub-title">Listagem de Produtos no Cupom</h5>
-
     <div
-    
     class="produtos"
     *ngFor="let prod of cupom.produtos"
     fxLayout="row"
@@ -122,7 +139,9 @@
         mat-icon-button
         aria-label="Example icon button with a vertical three dot icon"
       >
-        <mat-icon>delete</mat-icon>
+        <mat-icon
+        (click)="deletarProduto()"
+        >delete</mat-icon>
       </button>
     </div>
   </div>
