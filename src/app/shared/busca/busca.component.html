@@ -1,8 +1,14 @@
 <mat-card class="campo-busca">
   <mat-card-title class="campo-titulo"> Cupons </mat-card-title>
-  
+<div class="content">
   <mat-card-content class="campo-input"   fxLayout="row">
-    <mat-icon matTooltip="Buscar Cupom">search</mat-icon>
+    <mat-icon
+    id="pesquisar"
+    matTooltip="Buscar Cupom"
+    (click)="foco()"
+    >
+    search
+  </mat-icon>
     <input
     id="limpar"
     [matAutocomplete]="auto"
@@ -34,4 +40,6 @@
   </mat-autocomplete>
 
   </mat-card-content>
+
+</div>
 </mat-card>

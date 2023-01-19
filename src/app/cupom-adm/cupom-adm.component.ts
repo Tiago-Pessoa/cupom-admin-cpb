@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 import { CupomAdmService } from '../cupom-adm.service';
 import { DialogData } from '../dialog-data.model';
 import { Cupom } from './cupom.model';
+import { debounceTime, distinctUntilChanged, Observable, Subject, switchMap } from 'rxjs';
 
 
 @Component({
@@ -24,10 +26,32 @@ export class CupomAdmComponent implements OnInit {
   ];
   cupons: Cupom[] = [];
 
+  value = '';
+  cupons$!: Observable<Cupom[]>;
+
+  private searchTerm = new Subject<string>();
+  @Output() private select = new EventEmitter<Cupom>();
+
   constructor(private cupomAdmService: CupomAdmService, private dialog: MatDialog, private router: Router) {}
 
   ngOnInit(): void {
     this.getCupons();
+    this.cupons$ = this.searchTerm.pipe(
+      debounceTime(600),
+      distinctUntilChanged(),
+      switchMap((term) => this.cupomAdmService.search(term))
+    );
+  }
+
+  onSelect(selectedItem: MatAutocompleteSelectedEvent): void {
+    this.searchTerm.next('');
+    const cupom: Cupom = selectedItem.option.value;
+    this.select.emit(cupom);
+  }
+
+  search(term: string): void {
+    this.searchTerm.next(term);
+    
   }
 
   getCupons(): void {
@@ -40,7 +64,7 @@ export class CupomAdmComponent implements OnInit {
     this.router.navigate(['/cuponsAdm', cupom.id]);
   }
 
-  confirma(cupom: Cupom): void {
+  changeStatus(cupom: Cupom): void {
     const dialogData: DialogData = {
     cancelText: 'Cancelar',
     confirmText: 'Alterar',
@@ -66,4 +90,17 @@ export class CupomAdmComponent implements OnInit {
       };
     });
   };
+
+  foco(): void {
+    document.getElementById('buscar')?.focus?.()
+   }
+
+   limpar(){
+
+    document.getElementById('limpar')?.focus?.()
+
+  this.searchTerm.next('');
+ }
+
+
 }

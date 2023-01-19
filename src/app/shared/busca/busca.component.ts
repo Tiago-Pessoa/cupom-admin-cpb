@@ -37,10 +37,14 @@ export class BuscaComponent implements OnInit {
   }
 
    limpar(){
-    
+
       document.getElementById('limpar')?.focus?.()
-    
+
     this.searchTerm.next('');
+   }
+
+   foco(): void {
+    document.getElementById('limpar')?.focus?.()
    }
 
 }

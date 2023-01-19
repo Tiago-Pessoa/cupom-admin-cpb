@@ -16,7 +16,7 @@ export class CupomAdmService {
 getCupons(): Observable<Cupom[]> {
   return this.http.get<Cupom[]>(this.cuponsUrl)
 }
- 
+
 
 getCupom(id: number): Observable<Cupom> {
   return this.http.get<Cupom>(`${this.cuponsUrl}/${id}`);

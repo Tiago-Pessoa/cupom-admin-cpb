@@ -3,12 +3,53 @@
 
   <app-busca (selected)="onSelected($event)"></app-busca>
 
-<table mat-table [dataSource]="cupons" class="mat-elevation-z8">
+  <mat-card class="campo-busca">
+    <mat-card-title class="campo-titulo"> Cupons </mat-card-title>
+  <div class="content">
+    <mat-card-content class="campo-input"   fxLayout="row">
+      <mat-icon
+      id="pesquisar"
+      matTooltip="Buscar Cupom"
+      (click)="foco()"
+      >
+      search
+    </mat-icon>
+      <input
+      id="buscar"
+      (input)="search(boxBusca.value)"
+      matInput
+      placeholder="Digite aqui o nome do cupom que deseja encontrar..."
+      #boxBusca
+      type="text"
+      [matAutocomplete]="auto"
+      />
+      <button
+      mat-flat-button
+      matSuffix
+      *ngIf="boxBusca.value"
+      (click)= "boxBusca.value = ''"
+      (click)="limpar()"
+      class="btn-resetar"
+      color="warn"
+    >
+    Limpar
+    </button>
 
-  
-  
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
+    <mat-autocomplete
+    #auto="matAutocomplete"
+    (optionSelected)="onSelect($event); boxBusca.value= ''"
+  >
+    <mat-option *ngFor="let cupom of cupons$ | async" [value]="cupom">
+      {{ cupom.cupom  | uppercase }}
+    </mat-option>
+  </mat-autocomplete>
+
+    </mat-card-content>
+
+  </div>
+  </mat-card>
+
+<table mat-table [dataSource]="cupons" class="mat-elevation-z8">
 
   <!-- ID Column -->
   <ng-container matColumnDef="id">
@@ -19,7 +60,7 @@
   <!-- Cupom Column -->
   <ng-container matColumnDef="cupom">
     <th mat-header-cell *matHeaderCellDef>Cupom</th>
-    <td mat-cell *matCellDef="let element">{{ element.cupom | uppercase }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.cupom | uppercase}}</td>
   </ng-container>
 
   <!-- Data Inicial Column -->
@@ -55,7 +96,7 @@
       <mat-slide-toggle
         [(ngModel)]="element.ativo"
         color="primary"
-        (click)="confirma(element); $event.stopPropagation()"
+        (click)="changeStatus(element); $event.stopPropagation()"
         matTooltip="Status Cupom"
       ></mat-slide-toggle>
     </td>

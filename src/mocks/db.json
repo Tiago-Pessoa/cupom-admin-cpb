@@ -14,20 +14,16 @@
       "ativo": true,
       "produtos": [
         {
-          "cod": 4565,
+          "cod": 12345,
           "produto": "Livro 1"
         },
         {
-          "cod": 13202,
-          "produto": "Livro 2"
+          "cod": 22222,
+          "produto": "Livro 6"
         },
         {
-          "cod": 7895,
-          "produto": "Livro 3"
-        },
-        {
-          "cod": 16541,
-          "produto": "Livro 4"
+          "cod": 33333,
+          "produto": "Livro 7"
         }
       ]
     },
@@ -76,10 +72,6 @@
           "produto": "Livro 1"
         },
         {
-          "cod": 13202,
-          "produto": "Livro 2"
-        },
-        {
           "cod": 7895,
           "produto": "Livro 3"
         },
@@ -90,16 +82,12 @@
         {
           "cod": 12365,
           "produto": "Livro 5"
-        },
-        {
-          "cod": 14587,
-          "produto": "Livro 6"
-        },
-        {
-          "cod": 77777,
-          "produto": "Livro x"
         }
-      ]
+      ],
+      "tipoCupom": "Grupo",
+      "valorMin": "10",
+      "valorMax": "45",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!"
     },
     {
       "id": 4,
@@ -232,17 +220,12 @@
     {
       "id": 11,
       "cupom": "Deus é Bom",
-      "dataI": "20/08/2000",
-      "dataF": "20/08/2000",
+      "dataI": "05/01/2000",
+      "dataF": "20/08/2023",
       "tipo": "Porcentagem",
       "valor": 24.3,
       "ativo": true,
-      "produtos": [
-        {
-          "cod": "",
-          "produto": ""
-        }
-      ]
+      "produtos": []
     },
     {
       "cupom": "Deus Conosco",
@@ -251,7 +234,13 @@
       "dataI": "01/01/2000",
       "dataF": "31/12/2154",
       "ativo": false,
-      "id": 12
+      "id": 12,
+      "produtos": [
+        {
+          "cod": 55555,
+          "produto": "Livro 9"
+        }
+      ]
     },
     {
       "cupom": "Apocalipse",
@@ -260,7 +249,29 @@
       "dataI": "01/02/1999",
       "dataF": "23/08/2023",
       "ativo": true,
-      "id": 13
+      "id": 13,
+      "produtos": [
+        {
+          "cod": 11111,
+          "produto": "Livro 5"
+        },
+        {
+          "cod": 22222,
+          "produto": "Livro 6"
+        },
+        {
+          "cod": 33333,
+          "produto": "Livro 7"
+        },
+        {
+          "cod": 66666,
+          "produto": "Livro 10"
+        }
+      ],
+      "tipoCupom": "Único",
+      "valorMin": "1",
+      "valorMax": "99",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!"
     },
     {
       "cupom": "Mandamentos",
@@ -275,7 +286,7 @@
       "cupom": "Fidelidade",
       "tipo": "Valor Fixo",
       "valor": "45.20",
-      "dataI": "20/01/2023",
+      "dataI": "20/05/2021",
       "dataF": "23/02/2032",
       "id": 15,
       "ativo": true,
@@ -293,13 +304,19 @@
       "dataI": "01/01/2000",
       "dataF": "20/08/2023",
       "ativo": false,
-      "id": 16
+      "id": 16,
+      "produtos": [
+        {
+          "cod": 51515,
+          "produto": "Livro 26"
+        }
+      ]
     },
     {
       "cupom": "Teste 1",
       "tipo": "Brinde",
       "valor": "25",
-      "dataI": "20/01/2023",
+      "dataI": "16/08/1994",
       "dataF": "23/02/2032",
       "ativo": true,
       "id": 17
@@ -316,8 +333,16 @@
         {
           "cod": 11111,
           "produto": "Livro 5"
+        },
+        {
+          "cod": 22222,
+          "produto": "Livro 6"
         }
-      ]
+      ],
+      "tipoCupom": "Único",
+      "valorMin": "1",
+      "valorMax": "45",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!"
     },
     {
       "cupom": "Teste 3",
@@ -336,12 +361,7 @@
       "dataF": "31/12/2000",
       "id": 20,
       "ativo": false,
-      "produtos": [
-        {
-          "cod": 77777,
-          "produto": "Livro y"
-        }
-      ]
+      "produtos": []
     },
     {
       "cupom": "Teste 5",
@@ -354,7 +374,13 @@
       "tipoCupom": "Grupo",
       "valorMin": "1",
       "valorMax": "99",
-      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!"
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!",
+      "produtos": [
+        {
+          "cod": 12345,
+          "produto": "Livro 1"
+        }
+      ]
     },
     {
       "cupom": "Teste 6",
@@ -370,10 +396,108 @@
       "id": 22,
       "produtos": [
         {
-          "cod": 12345,
-          "produto": "Livro 1"
+          "cod": 41312,
+          "produto": "Livro 4"
+        },
+        {
+          "cod": 22222,
+          "produto": "Livro 6"
+        },
+        {
+          "cod": 44444,
+          "produto": "Livro 8"
+        },
+        {
+          "cod": 66666,
+          "produto": "Livro 10"
         }
       ]
+    },
+    {
+      "cupom": "Teste 7",
+      "tipo": "Valor Fixo",
+      "valor": "25",
+      "tipoCupom": "Único",
+      "valorMin": "1",
+      "valorMax": "99",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!",
+      "dataI": "12/01/2000",
+      "dataF": "23/02/2032",
+      "ativo": true,
+      "id": 23,
+      "produtos": [
+        {
+          "cod": 12345,
+          "produto": "Livro 1"
+        },
+        {
+          "cod": 21314,
+          "produto": "Livro 3"
+        },
+        {
+          "cod": 11111,
+          "produto": "Livro 5"
+        },
+        {
+          "cod": 33333,
+          "produto": "Livro 7"
+        }
+      ]
+    },
+    {
+      "cupom": "Teste 8",
+      "tipo": "Porcentagem",
+      "valor": "70",
+      "tipoCupom": "Único",
+      "valorMin": "10",
+      "valorMax": "30",
+      "beneficio": "Esse Cupom não dá desconto em nada.",
+      "dataI": "01/02/1999",
+      "dataF": "20/08/2023",
+      "ativo": false,
+      "id": 24,
+      "produtos": [
+        {
+          "cod": 55555,
+          "produto": "Livro 9"
+        },
+        {
+          "cod": 66666,
+          "produto": "Livro 10"
+        }
+      ]
+    },
+    {
+      "cupom": "Teste 9",
+      "tipo": "Brinde",
+      "valor": "154",
+      "tipoCupom": "Único",
+      "valorMin": "1",
+      "valorMax": "30",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!",
+      "dataI": "01/01/2000",
+      "dataF": "20/08/2023",
+      "ativo": true,
+      "id": 25,
+      "produtos": [
+        {
+          "cod": 11111,
+          "produto": "Livro 5"
+        }
+      ]
+    },
+    {
+      "cupom": "Teste 10",
+      "ativo": false,
+      "dataF": "23/02/2032",
+      "dataI": "01/01/2000",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!",
+      "valorMax": "99",
+      "valorMin": "1",
+      "tipoCupom": "Único",
+      "valor": "70",
+      "tipo": "Porcentagem",
+      "id": 26
     }
   ],
   "produtos": [

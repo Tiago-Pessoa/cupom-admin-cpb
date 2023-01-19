@@ -14,7 +14,6 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CupomEdicaoComponent } from './cupom-edicao/cupom-edicao.component';
-// import { CupomCriacaoComponent } from './cupom-criacao/cupom-criacao.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
 import { LoadingInterceptor } from './loading.interceptor';
@@ -42,6 +41,7 @@ registerLocaleData(ptBr);
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
+
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
