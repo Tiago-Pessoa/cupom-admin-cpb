@@ -28,9 +28,7 @@ search(term: string): Observable<Cupom[]> {
   }
   return this.http.get<Cupom[]>(`${this.cuponsUrl}?cupom=${term}`).pipe(
     tap((cupons)=> cupons.length ? console.log('found coupons') :
-    alert("Nenhum Cupom Encontrado com esses termos, tente outro nome para encontrar um Cupom existente!")
-    )
-    )
+    alert("Nenhum Cupom Encontrado com esses termos, tente outro nome para encontrar um Cupom existente!")));
   }
 
   create(cupom: Cupom): Observable<Cupom> {

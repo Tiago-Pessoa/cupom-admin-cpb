@@ -27,31 +27,13 @@ export class CupomAdmComponent implements OnInit {
   cupons: Cupom[] = [];
 
   value = '';
-  cupons$!: Observable<Cupom[]>;
 
-  private searchTerm = new Subject<string>();
-  @Output() private select = new EventEmitter<Cupom>();
 
   constructor(private cupomAdmService: CupomAdmService, private dialog: MatDialog, private router: Router) {}
 
   ngOnInit(): void {
     this.getCupons();
-    this.cupons$ = this.searchTerm.pipe(
-      debounceTime(600),
-      distinctUntilChanged(),
-      switchMap((term) => this.cupomAdmService.search(term))
-    );
-  }
 
-  onSelect(selectedItem: MatAutocompleteSelectedEvent): void {
-    this.searchTerm.next('');
-    const cupom: Cupom = selectedItem.option.value;
-    this.select.emit(cupom);
-  }
-
-  search(term: string): void {
-    this.searchTerm.next(term);
-    
   }
 
   getCupons(): void {
@@ -91,15 +73,37 @@ export class CupomAdmComponent implements OnInit {
     });
   };
 
-  foco(): void {
+  search(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+
+
+
+
+
+    if (target.value.length > 0) {
+      this.cupons = this.cupons.filter((cupom) => cupom.cupom.toLowerCase().includes(value.toLowerCase()));
+      if (this.cupons.length === 0) {
+        alert(`Nenhum Cupom Encontrado com o termo: "${target.value}", tente OUTRO nome para encontrar um Cupom existente!`)
+        target.value = '';
+        this.getCupons();
+      }
+    }else {
+      this.getCupons();
+    }
+
+   
+  }
+
+  limpar(){
     document.getElementById('buscar')?.focus?.()
-   }
+    this.getCupons();
 
-   limpar(){
+ }
 
-    document.getElementById('limpar')?.focus?.()
-
-  this.searchTerm.next('');
+ foco(): void {
+  document.getElementById('buscar')?.focus?.()
  }
 
 

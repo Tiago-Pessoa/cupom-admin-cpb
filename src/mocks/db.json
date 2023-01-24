@@ -24,6 +24,10 @@
         {
           "cod": 33333,
           "produto": "Livro 7"
+        },
+        {
+          "cod": 54321,
+          "produto": "Livro 2"
         }
       ]
     },
@@ -307,8 +311,8 @@
       "id": 16,
       "produtos": [
         {
-          "cod": 51515,
-          "produto": "Livro 26"
+          "cod": 55555,
+          "produto": "Livro 9"
         }
       ]
     },
@@ -483,6 +487,14 @@
         {
           "cod": 11111,
           "produto": "Livro 5"
+        },
+        {
+          "cod": 54321,
+          "produto": "Livro 2"
+        },
+        {
+          "cod": 60606,
+          "produto": "Livro 19"
         }
       ]
     },
@@ -497,7 +509,94 @@
       "tipoCupom": "Único",
       "valor": "70",
       "tipo": "Porcentagem",
-      "id": 26
+      "id": 26,
+      "produtos": [
+        {
+          "cod": 11111,
+          "produto": "Livro 5"
+        },
+        {
+          "cod": 12345,
+          "produto": "Livro 1"
+        },
+        {
+          "cod": 20202,
+          "produto": "Livro 15"
+        }
+      ]
+    },
+    {
+      "cupom": "Teste 11",
+      "tipo": "Valor Fixo",
+      "valor": "154",
+      "tipoCupom": "Único",
+      "valorMin": "1",
+      "valorMax": "99",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!",
+      "dataI": "20/01/2023",
+      "dataF": "25/10/2023",
+      "ativo": true,
+      "id": 27,
+      "produtos": [
+        {
+          "cod": 11111,
+          "produto": "Livro 5"
+        },
+        {
+          "cod": 22222,
+          "produto": "Livro 6"
+        },
+        {
+          "cod": 33333,
+          "produto": "Livro 7"
+        },
+        {
+          "cod": 44444,
+          "produto": "Livro 8"
+        },
+        {
+          "cod": 55555,
+          "produto": "Livro 9"
+        },
+        {
+          "cod": 12345,
+          "produto": "Livro 1"
+        },
+        {
+          "cod": 40404,
+          "produto": "Livro 17"
+        },
+        {
+          "cod": 41414,
+          "produto": "Livro 25"
+        }
+      ]
+    },
+    {
+      "cupom": "Janelas para Vida",
+      "tipo": "Porcentagem",
+      "valor": "70",
+      "tipoCupom": "Único",
+      "valorMin": "10",
+      "valorMax": "45",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!",
+      "dataI": "01/01/2000",
+      "dataF": "20/08/2023",
+      "ativo": false,
+      "id": 28
+    },
+    {
+      "cupom": "coração",
+      "id": 29,
+      "ativo": true,
+      "dataF": "20/08/2023",
+      "dataI": "01/01/2000",
+      "beneficio": "Esse Cupom não dá desconto em nada, nada mesmo!!!",
+      "valorMax": "99",
+      "valorMin": "1",
+      "tipoCupom": "Grupo",
+      "valor": "30",
+      "tipo": "Porcentagem"
     }
   ],
   "produtos": [

@@ -1,9 +1,9 @@
 
 <div class="main">
 
-  <app-busca (selected)="onSelected($event)"></app-busca>
+  <!-- <app-busca (selected)="onSelected($event)"></app-busca> -->
 
-  <mat-card class="campo-busca">
+  <mat-card class="campo-busca mat-elevation-z4">
     <mat-card-title class="campo-titulo"> Cupons </mat-card-title>
   <div class="content">
     <mat-card-content class="campo-input"   fxLayout="row">
@@ -14,15 +14,14 @@
       >
       search
     </mat-icon>
-      <input
-      id="buscar"
-      (input)="search(boxBusca.value)"
-      matInput
-      placeholder="Digite aqui o nome do cupom que deseja encontrar..."
-      #boxBusca
-      type="text"
-      [matAutocomplete]="auto"
-      />
+    <input
+    id="buscar"
+    matInput
+    placeholder="Digite aqui o nome do cupom que deseja encontrar..."
+    #boxBusca
+    type="text"
+    (input)="search($event)"
+    />
       <button
       mat-flat-button
       matSuffix
@@ -35,17 +34,9 @@
     Limpar
     </button>
 
-    <mat-autocomplete
-    #auto="matAutocomplete"
-    (optionSelected)="onSelect($event); boxBusca.value= ''"
-  >
-    <mat-option *ngFor="let cupom of cupons$ | async" [value]="cupom">
-      {{ cupom.cupom  | uppercase }}
-    </mat-option>
-  </mat-autocomplete>
+
 
     </mat-card-content>
-
   </div>
   </mat-card>
 

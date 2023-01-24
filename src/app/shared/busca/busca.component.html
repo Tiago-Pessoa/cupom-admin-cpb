@@ -35,11 +35,10 @@
     (optionSelected)="onSelected($event); boxBusca.value= ''"
   >
     <mat-option *ngFor="let cupom of cupons$ | async" [value]="cupom">
-      {{ cupom.cupom  | uppercase }}
+      {{ cupom.cupom| uppercase }}
     </mat-option>
   </mat-autocomplete>
 
   </mat-card-content>
-
 </div>
 </mat-card>

@@ -23,7 +23,8 @@ export class BuscaComponent implements OnInit {
       debounceTime(600),
       distinctUntilChanged(),
       switchMap((term) => this.cupomAdmService.search(term))
-    );
+      );
+
   }
 
   onSelected(selectedItem: MatAutocompleteSelectedEvent): void {
