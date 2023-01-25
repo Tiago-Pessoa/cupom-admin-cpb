@@ -76,24 +76,18 @@ export class CupomAdmComponent implements OnInit {
   search(e: Event): void {
     const target = e.target as HTMLInputElement;
     const value = target.value;
-
-
-
-
-
-
-    if (target.value.length > 0) {
-      this.cupons = this.cupons.filter((cupom) => cupom.cupom.toLowerCase().includes(value.toLowerCase()));
-      if (this.cupons.length === 0) {
-        alert(`Nenhum Cupom Encontrado com o termo: "${target.value}", tente OUTRO nome para encontrar um Cupom existente!`)
-        target.value = '';
+    if (!target.value.match(/['ˆ˜`]/)){
+      if (value.length) {
+        this.cupons = this.cupons.filter((cupom) => cupom.cupom.toLowerCase().includes(value.toLowerCase()));
+        if (!this.cupons.length) {
+          alert(`Nenhum Cupom Encontrado com o termo: "${value.toUpperCase()}". Tente OUTRO nome para encontrar um Cupom existente!`)
+          target.value = '';
+          this.getCupons();
+        }
+      }else {
         this.getCupons();
       }
-    }else {
-      this.getCupons();
     }
-
-   
   }
 
   limpar(){

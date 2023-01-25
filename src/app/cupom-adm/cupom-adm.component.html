@@ -1,9 +1,9 @@
 
-<div class="main">
+<div class="main mat-elevation-z18">
 
   <!-- <app-busca (selected)="onSelected($event)"></app-busca> -->
 
-  <mat-card class="campo-busca mat-elevation-z4">
+  <mat-card class="campo-busca">
     <mat-card-title class="campo-titulo"> Cupons </mat-card-title>
   <div class="content">
     <mat-card-content class="campo-input"   fxLayout="row">
@@ -40,7 +40,7 @@
   </div>
   </mat-card>
 
-<table mat-table [dataSource]="cupons" class="mat-elevation-z8">
+<table mat-table [dataSource]="cupons">
 
   <!-- ID Column -->
   <ng-container matColumnDef="id">
@@ -107,7 +107,7 @@
     aria-label="Deletar Produto"
     routerLink="new"
   >
-    <mat-icon>add</mat-icon>
+    <mat-icon matTooltip="Criar Novo Cupom">add</mat-icon>
   </button>
 </div>
 </div>

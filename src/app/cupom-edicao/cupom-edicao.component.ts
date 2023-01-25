@@ -145,7 +145,7 @@ export class CupomEdicaoComponent implements OnInit {
     const dialogData: DialogData = {
       cancelText: 'Cancelar',
       confirmText: 'OK',
-      content: `Os Dados NÃO SALVOS do cupom "${this.cupom.cupom}" serão descartados, Deseja PROSSEGUIR mesmo assim?`
+      content: `Os Dados NÃO SALVOS do cupom "${this.cupom.cupom}" serão descartados. Deseja PROSSEGUIR mesmo assim?`
     }
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       data: dialogData,
@@ -162,7 +162,7 @@ export class CupomEdicaoComponent implements OnInit {
     const dialogData: DialogData = {
       cancelText: 'Cancelar',
       confirmText: 'OK',
-      content: `Esse Cupom e todas as alterações serão descartadas, Deseja PROSSEGUIR mesmo assim?`
+      content: `Esse Cupom e todas as alterações serão descartadas. Deseja PROSSEGUIR mesmo assim?`
     }
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       data: dialogData,
@@ -202,5 +202,7 @@ export class CupomEdicaoComponent implements OnInit {
   isValidAction(): boolean {
     return !!this.cupom.cupom.trim();
   };
+
+  
 
 }

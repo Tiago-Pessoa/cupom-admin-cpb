@@ -1,10 +1,14 @@
+.main {
+  width: 95%;
+  margin: 0 auto 2em auto;
+}
 table {
-  width: 90%;
+  width: 100%;
   margin: 0 auto 2em auto;
 }
 
 .mat-row {
-  height: 6em;
+  height: 5em;
   cursor: pointer;
 }
 .mat-row:hover {
@@ -42,7 +46,7 @@ table {
 
 
 .campo-busca {
-  width: 90%;
+  width: 100%;
   padding: 2em 0;
   margin: 2em auto 0 auto;
 }

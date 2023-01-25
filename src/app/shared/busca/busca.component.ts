@@ -35,6 +35,7 @@ export class BuscaComponent implements OnInit {
 
   search(term: string): void {
     this.searchTerm.next(term);
+    
   }
 
    limpar(){
