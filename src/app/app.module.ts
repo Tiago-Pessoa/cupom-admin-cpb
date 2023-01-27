@@ -1,3 +1,4 @@
+import { TokenInterceptor } from './token.interceptor';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +20,9 @@ import { LoadingComponent } from './loading/loading.component';
 import { LoadingInterceptor } from './loading.interceptor';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { SharedModule } from './shared/shared.module';
+import { LoginComponent } from './cupom-login/login/login.component';
+import { CreatAcountComponent } from './cupom-login/creat-acount/creat-acount.component';
+import { CupomAuthenticationComponent } from './cupom-authentication/cupom-authentication.component';
 
 
 registerLocaleData(ptBr);
@@ -31,6 +35,9 @@ registerLocaleData(ptBr);
     CupomEdicaoComponent,
     LoadingComponent,
     ConfirmationDialogComponent,
+    LoginComponent,
+    CreatAcountComponent,
+    CupomAuthenticationComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +52,8 @@ registerLocaleData(ptBr);
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
-    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
+    { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
+    { provide: HTTP_INTERCEPTORS, useClass:  TokenInterceptor, multi: true},
   ],
   bootstrap: [AppComponent],
 })

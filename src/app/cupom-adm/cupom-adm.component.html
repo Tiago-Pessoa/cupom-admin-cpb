@@ -57,13 +57,13 @@
   <!-- Data Inicial Column -->
   <ng-container matColumnDef="dataI">
     <th mat-header-cell *matHeaderCellDef>Data Inicial</th>
-    <td mat-cell *matCellDef="let element">{{ element.dataI }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.dataI | date : 'dd/MM/yyyy  HH:mm' }}</td>
   </ng-container>
 
   <!-- Data Final Column -->
   <ng-container matColumnDef="dataF">
     <th mat-header-cell *matHeaderCellDef>Data Final</th>
-    <td mat-cell *matCellDef="let element">{{ element.dataF }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.dataF  | date : 'dd/MM/yyyy  HH:mm'  }}</td>
   </ng-container>
 
   <!-- Tipo Valor Column -->

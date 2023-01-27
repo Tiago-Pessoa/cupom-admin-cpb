@@ -1,8 +1,8 @@
 export interface Cupom {
   id: number;
   cupom: string;
-  dataI: string;
-  dataF: string;
+  dataI: Date;
+  dataF: Date;
   tipo: string;
   tipoCupom: string;
   valorMin: string;
